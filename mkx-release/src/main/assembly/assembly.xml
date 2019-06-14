@@ -1,0 +1,40 @@
+<assembly>
+    <id>1.0.0</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>src/main/resources/config</directory>
+			<outputDirectory>
+				MKXPACKAGE
+			</outputDirectory>
+			<includes>
+				<include>*.xml</include>
+				<include>*.properties</include>
+				<include>*.xls</include>
+			</includes> 
+		</fileSet>
+		
+		
+		<fileSet>
+			<directory>src/main/resources/install</directory>
+			<outputDirectory>
+				MKXPACKAGE
+			</outputDirectory>
+			<includes>
+				<include>RODProcessRun.sh</include>
+			</includes>
+		</fileSet>		
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>
+				MKXPACKAGE
+			</outputDirectory>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
+</assembly>
